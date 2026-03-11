@@ -28,6 +28,131 @@
         .bg-green-light {
             background-color: #3BB32E;
         }
+
+        .color-red {
+            color: #ED1B37;
+        }
+
+        /* From Uiverse.io by kennyotsu */
+        .card {
+            /* color used to softly clip top and bottom of the .words container */
+            --bg-color: white;
+            background-color: var(--bg-color);
+        }
+
+        .loader {
+            color: rgb(124, 124, 124);
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 40px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .words {
+            overflow: hidden;
+            position: relative;
+        }
+
+            .words::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient( var(--bg-color) 1%, transparent 12%, transparent 75%, var(--bg-color) 90% );
+                z-index: 20;
+            }
+
+        .word {
+            display: block;
+            height: 100%;
+            padding-left: 6px;
+            color: black;
+            animation: spin_4991 7s infinite;
+        }
+
+        @keyframes spin_4991 {
+            5% {
+                -webkit-transform: translateY(-102%);
+                transform: translateY(-102%);
+            }
+
+            12.5% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            17.5% {
+                -webkit-transform: translateY(-202%);
+                transform: translateY(-202%);
+            }
+
+            25% {
+                -webkit-transform: translateY(-200%);
+                transform: translateY(-200%);
+            }
+
+            30% {
+                -webkit-transform: translateY(-302%);
+                transform: translateY(-302%);
+            }
+
+            37.5% {
+                -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+            }
+
+            42.5% {
+                -webkit-transform: translateY(-402%);
+                transform: translateY(-402%);
+            }
+
+            50% {
+                -webkit-transform: translateY(-400%);
+                transform: translateY(-400%);
+            }
+
+            55% {
+                -webkit-transform: translateY(-502%);
+                transform: translateY(-502%);
+            }
+
+            62.5% {
+                -webkit-transform: translateY(-500%);
+                transform: translateY(-500%);
+            }
+
+            67.5% {
+                -webkit-transform: translateY(-602%);
+                transform: translateY(-602%);
+            }
+
+            75% {
+                -webkit-transform: translateY(-600%);
+                transform: translateY(-600%);
+            }
+
+            80% {
+                -webkit-transform: translateY(-702%);
+                transform: translateY(-702%);
+            }
+
+            87.5% {
+                -webkit-transform: translateY(-700%);
+                transform: translateY(-700%);
+            }
+
+            92.5% {
+                -webkit-transform: translateY(-802%);
+                transform: translateY(-802%);
+            }
+
+            100% {
+                -webkit-transform: translateY(-800%);
+                transform: translateY(-800%);
+            }
+        }
+
     </style>
 </head>
 <body class="text-black pt-32 boldonse-font bg-white">
@@ -35,21 +160,21 @@
     <!--<div class="fixed top-0 left-0 right-0 text-2xl bg-black text-white mx-auto px-3 py-1 w-fit font-bold mt-4 tracking-tight">DUDESWITHDEWS.COM</div>-->
 
     <div class="fixed top-0 left-0 right-0 mx-auto mt-4">
-        <img src="./logo.png" class="w-1/4 mx-auto"/>
+        <img src="./logo.png" class="w-24 mx-auto" />
     </div>
 
-    <h1 class="font-bold text-2xl/10 text-center px-4">You're invited to <span class="color-green-light">Dudes With Dews</span> 2026</h1>
+    <h1 class="font-bold text-2xl/10 text-center px-4 pt-16">You're invited to <span class="color-green-light">Dudes With Dews</span> 2026</h1>
 
-    <div class="px-4">
-        <button class="bg-green-light text-xl py-4 w-full text-white mt-8 shadow-lg">RSVP</button>
+    <div class="px-4 flex justify-center">
+        <button class="bg-green-light text-xl py-4 w-full text-white mt-8 shadow-lg lg:w-1/2">RSVP</button>
     </div>
 
-    <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 mx-auto mt-8">
+    <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 mx-auto mt-16">
         <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
     </svg>
 
-    <section class="bg-black text-white text-center py-8 text-2xl/10 mt-8">
-        <h2 class="">April 26th</h2>
+    <section class="bg-black text-white text-center py-8 text-2xl/10 mt-8 lg:py-16">
+        <h2 class="underline decoration-4 underline-offset-4">April 25th</h2>
         <ul class="mx-auto w-fit mt-8">
             <li class="flex gap-4 items-center">
                 <svg class="size-8" aria-hidden="true" fill="none" viewBox="0 0 24 24">
@@ -58,12 +183,12 @@
                 </svg>
                 <p>Food</p>
             </li>
-            <li class="flex gap-4 items-center">
+            <li class="flex gap-4 items-center color-green-light">
                 <svg class="size-8" aria-hidden="true" fill="none" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M6 2c-.27677 0-.54116.11471-.73024.31682-.18909.20211-.28595.47354-.26754.7497L6.07775 19.1996C6.18281 20.7755 7.49172 22 9.07111 22h5.85779c1.5794 0 2.8883-1.2246 2.9934-2.8004l1.0755-16.13308c.0184-.27616-.0785-.54759-.2676-.7497C18.5412 2.11471 18.2768 2 18 2H6Zm1.2124 4.15264L7.06889 4h9.86221l-.1651 2.47714-.0179.0163c-.133.12056-.3226.28077-.5474.43924-.4853.34209-.9823.56732-1.3743.56732-.2473 0-.3394-.06433-.6919-.4371l-.0272-.02876C13.7466 6.65192 13.1314 6 11.9894 6c-1.1421 0-1.7573.65192-2.11794 1.03414l-.02716.02876c-.35252.37277-.44468.4371-.69195.4371-.24728 0-.33944-.06433-.69196-.4371l-.02716-.02876c-.25189-.26693-.62791-.66541-1.22083-.8815Z" clip-rule="evenodd" />
                 </svg>
 
-                <p class="color-green-light">Dew</p>
+                <p>Dew</p>
             </li>
             <li class="flex gap-4 items-center">
                 <svg class="size-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -76,6 +201,44 @@
                     <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm4.996 2a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM11 8a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Zm-4.004 3a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM11 11a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Zm-4.004 3a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM11 14a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Z" clip-rule="evenodd" />
                 </svg>
                 <p>Games</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="text-center py-8 text-2xl/10">
+        <h2 class="underline decoration-4 underline-offset-4"><span class="color-green-light">Dew</span> of the Year</h2>
+        <!-- From Uiverse.io by kennyotsu -->
+        <div class="card py-8">
+            <div class="loader w-fit mx-auto">
+                <div class="words text-xl">
+                    <span class="word">Regular</span>
+                    <span class="word">Voltage</span>
+                    <span class="word">Code Red</span>
+                    <span class="word">Baja Blast</span>
+                    <span class="word">Trolli</span>
+                    <span class="word">Baja Cabo Citrus</span>
+                    <span class="word">Spark</span>
+                    <span class="word">Purple Thunder</span>
+                    <span class="word">Regular</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white text-black text-center pb-8 text-2xl/10 lg:py-16">
+        <h2 class="underline decoration-4 underline-offset-4">Games</h2>
+        <ul class="text-lg/10 mt-4">
+            <li>
+                <div>
+                    <span class="color-green-light">Dew</span> Chug
+                </div>
+                <div class="text-sm/10">How fast can you drink a <span class="color-green-light">dew?</span></div>
+            </li>
+            <li class="mt-2">
+                <div>
+                    <span class="color-red">Hot</span> Dudes
+                </div>
+                <div class="text-sm/10">How much <span class="color-red">heat</span> can you handle?</div>
             </li>
         </ul>
     </section>
