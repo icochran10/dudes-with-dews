@@ -36,7 +36,7 @@
         /* From Uiverse.io by kennyotsu */
         .card {
             /* color used to softly clip top and bottom of the .words container */
-            --bg-color: white;
+            --bg-color: black;
             background-color: var(--bg-color);
         }
 
@@ -67,8 +67,20 @@
             display: block;
             height: 100%;
             padding-left: 6px;
-            color: black;
+            color: white;
             animation: spin_4991 7s infinite;
+        }
+
+        .glass {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+
+        .glass2 {
+            backdrop-filter: blur(16px) saturate(50%);
+            -webkit-backdrop-filter: blur(16px) saturate(50%);
+            background-color: rgba(59, 179, 46, 0.01);
         }
 
         @keyframes spin_4991 {
@@ -159,23 +171,23 @@
 
     <!--<div class="fixed top-0 left-0 right-0 text-2xl bg-black text-white mx-auto px-3 py-1 w-fit font-bold mt-4 tracking-tight">DUDESWITHDEWS.COM</div>-->
 
-    <div class="fixed top-0 left-0 right-0 mx-auto mt-4">
+    <div class="fixed top-0 left-0 right-0 mx-auto py-4 glass2">
         <img src="./logo.png" class="w-24 mx-auto" />
     </div>
 
     <h1 class="font-bold text-2xl/10 text-center px-4 pt-16">You're invited to <span class="color-green-light">Dudes With Dews</span> 2026</h1>
 
     <div class="px-4 flex justify-center">
-        <button class="bg-green-light text-xl py-4 w-full text-white mt-8 shadow-lg lg:w-1/2">RSVP</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf99OdIu2k98RsV_qXTTKzkukB4WuTKv5Ak6vWC56VaIHNN1Q/viewform?usp=publish-editor" target="_blank" class="bg-green-light text-center text-xl py-4 w-full text-white mt-8 shadow-lg lg:w-1/2">RSVP</a>
     </div>
 
     <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 mx-auto mt-16">
         <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
     </svg>
 
-    <section class="bg-black text-white text-center py-8 text-2xl/10 mt-8 lg:py-16">
-        <h2 class="underline decoration-4 underline-offset-4">April 25th</h2>
-        <ul class="mx-auto w-fit mt-8">
+    <section class="bg-black text-white text-center py-16 mt-8 lg:py-16">
+        <h2 class="text-2xl">What we'll dew</h2>
+        <ul class="mx-auto w-fit mt-8 text-lg/10">
             <li class="flex gap-4 items-center">
                 <svg class="size-8" aria-hidden="true" fill="none" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M21 11.0001c0-.8815-.3799-1.6731-.984-2.22145.5031-1.33846.2177-2.97144-.9813-3.94213-1.059-.8574-2.4761-.97568-3.6271-.42051-.2908-.39083-.6632-.70423-1.0895-.93179-.8229-.43923-1.8026-.53949-2.7413-.35637-1.2172.23745-2.18257 1.03558-2.68037 2.07405-.08983-.05265-.18224-.10165-.27714-.14661-.86027-.40752-1.89128-.46242-2.91449.05292-1.40603.70815-2.13029 2.35257-1.84394 3.8504-.16121.14468-.30525.31046-.42787.49818C3.13246 9.91685 3 10.4482 3 11.0001c0 .5506.445.9972.99497.9999H20.005c.55-.0027.995-.4493.995-.9999Zm-6.8905-.7654c-.2294-.50238-.8227-.72362-1.325-.49417-.5024.22945-1.0956.00821-1.3251-.49415-.2294-.50237-.0082-1.09562.4942-1.32507 1.5071-.68836 3.2868-.02463 3.9752 1.48247.2294.50236.0082 1.09562-.4942 1.32502-.5024.2295-1.0956.0083-1.3251-.4941Z" clip-rule="evenodd" />
@@ -205,8 +217,26 @@
         </ul>
     </section>
 
-    <section class="text-center py-8 text-2xl/10">
-        <h2 class="underline decoration-4 underline-offset-4"><span class="color-green-light">Dew</span> of the Year</h2>
+    <section class="bg-white text-black text-center py-16 border-b-4 border-black">
+        <ul class="">
+            <li>
+                <div class="text-2xl">Dew Chug</div>
+                <div class="text-lg/10 mt-4">How fast can you drink a <span class="color-green-light">dew?</span></div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-white text-black text-center py-16">
+        <ul class="">
+            <li class="">
+                <div class="text-2xl">Hot Dudes</div>
+                <div class="text-lg/10 mt-4">How much <span class="color-red">heat</span> can you handle?</div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-black text-white text-center py-16">
+        <h2 class="text-2xl">Dew of the Year</h2>
         <!-- From Uiverse.io by kennyotsu -->
         <div class="card py-8">
             <div class="loader w-fit mx-auto">
@@ -225,22 +255,10 @@
         </div>
     </section>
 
-    <section class="bg-white text-black text-center pb-8 text-2xl/10 lg:py-16">
-        <h2 class="underline decoration-4 underline-offset-4">Games</h2>
-        <ul class="text-lg/10 mt-4">
-            <li>
-                <div>
-                    <span class="color-green-light">Dew</span> Chug
-                </div>
-                <div class="text-sm/10">How fast can you drink a <span class="color-green-light">dew?</span></div>
-            </li>
-            <li class="mt-2">
-                <div>
-                    <span class="color-red">Hot</span> Dudes
-                </div>
-                <div class="text-sm/10">How much <span class="color-red">heat</span> can you handle?</div>
-            </li>
-        </ul>
+    <section class="bg-white py-16">
+        <div class="px-4 flex justify-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf99OdIu2k98RsV_qXTTKzkukB4WuTKv5Ak6vWC56VaIHNN1Q/viewform?usp=publish-editor" target="_blank" class="bg-green-light text-center text-xl py-4 w-full text-white shadow-lg lg:w-1/2">RSVP</a>
+        </div>
     </section>
 </body>
 </html>
